@@ -9,3 +9,7 @@ The following environment variables must be set:
 - `AWS_SECRET_ACCESS_KEY`
 - `AWS_DEFAULT_REGION`
 - `AWS_ASSUME_ROLE_ARN`
+
+# Run it
+
+` docker run --rm  mowat27/aws-session-action:latest`
