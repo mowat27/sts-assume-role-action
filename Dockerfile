@@ -1,5 +1,5 @@
 FROM alpine:3.11
-LABEL maintainer="Adrian Mowat <adrian@flexiclock.com>"
+LABEL maintainer="Adrian Mowat <adrian.mowat@gmail.com>"
 
 RUN apk --no-cache add jq python py-pip && \
     pip install --upgrade pip awscli
