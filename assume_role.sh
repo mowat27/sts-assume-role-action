@@ -18,7 +18,8 @@ temp_role=$(aws sts assume-role \
      --role-arn "$AWS_ASSUME_ROLE_ARN" \
      --role-session-name "$session_name")
 
-echo "::set-output name=AWS_ACCESS_KEY_ID::$(echo "$temp_role" | jq -r .Credentials.AccessKeyId)"
-echo "::set-output name=AWS_SECRET_ACCESS_KEY::$(echo "$temp_role" | jq -r .Credentials.SecretAccessKey)"
-echo "::set-output name=AWS_SESSION_TOKEN::$(echo "$temp_role" | jq -r .Credentials.SessionToken)"
+echo "::set-output name=AccessKeyId::$(echo "$temp_role" | jq -r .Credentials.AccessKeyId)"
+echo "::set-output name=SecretAccessKey::$(echo "$temp_role" | jq -r .Credentials.SecretAccessKey)"
+echo "::set-output name=SessionToken::$(echo "$temp_role" | jq -r .Credentials.SessionToken)"
+echo "::set-output name=Expiration::$(echo "$temp_role" | jq -r .Credentials.Expiration)"
 
